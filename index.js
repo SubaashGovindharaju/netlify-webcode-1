@@ -5,66 +5,67 @@ row.className = "row";
 container.append(row);
 let search;
 
-function get(){
-let input = document.getElementById("input-search").value;
-switch (input) {
-    
-    case 'micro':
-       
-    search= `https://api.openbrewerydb.org/v1/breweries?by_type=micro`;
-        
-        fetchData();
-        break;
-    case 'nano':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=nano`;
-        fetchData();
-        break;
-    case 'regional':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=regional`;
-        fetchData();
-        break;
-    case 'brewpub':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=brewpub`;
-        fetchData();
-        break;
-    case 'large':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=large`;
-        fetchData();
-        break;
-    case 'planning':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=planning`;
-        fetchData();
-        break;
-    case 'bar':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=bar`;
-        fetchData();
-        break;
-    case 'contract':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=contract`;
-        fetchData();
-        break;
-    case 'proprietor':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=proprietor`;
-        fetchData();
-        break;
-    case 'closed':
-        search = `https://api.openbrewerydb.org/v1/breweries?by_type=closed`;
-        fetchData();
-        break;
-        default:    
-       
-         console.log(`Sorry, we are out of .`);
-}
+
+// Function for the search bar
+function get() {
+    let input = document.getElementById("input-search").value;
+    switch (input) {
+
+        case 'micro':
+
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=micro`;
+
+            fetchData();
+            break;
+        case 'nano':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=nano`;
+            fetchData();
+            break;
+        case 'regional':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=regional`;
+            fetchData();
+            break;
+        case 'brewpub':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=brewpub`;
+            fetchData();
+            break;
+        case 'large':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=large`;
+            fetchData();
+            break;
+        case 'planning':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=planning`;
+            fetchData();
+            break;
+        case 'bar':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=bar`;
+            fetchData();
+            break;
+        case 'contract':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=contract`;
+            fetchData();
+            break;
+        case 'proprietor':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=proprietor`;
+            fetchData();
+            break;
+        case 'closed':
+            search = `https://api.openbrewerydb.org/v1/breweries?by_type=closed`;
+            fetchData();
+            break;
+        default:
+
+            console.log(`Sorry, we are out of .`);
+    }
 
 }
 
 
 async function fetchData() {
-    
-
+    //function for fetching data from api
     var data = await fetch(search);
     var data1 = await data.json();
-    row.innerHTML="";
+    row.innerHTML = "";
     for (var i = 0; i < data1.length; i++) {
         row.innerHTML += `<div class=" content col-sm-6 col-md-4 col-lg-4 col-xl-4">
         <div class="card">
@@ -92,18 +93,17 @@ async function fetchData() {
 
 
 
+// function forthe data when the screen is opened
 
-window.onload = function() {
- 
+window.onload = function () {
+
+    //function for fetching data from api
     async function fetchData() {
-
-       
-    
         var data = await fetch(`https://api.openbrewerydb.org/v1/breweries`);
         var data1 = await data.json();
         console.log(data1);
         for (var i = 0; i < data1.length; i++) {
-    
+
             row.innerHTML += `<div class=" content col-sm-6 col-md-4 col-lg-4 col-xl-4">
     <div class="card">
       <div class="card-body">
@@ -120,12 +120,12 @@ window.onload = function() {
       </div>
     </div>
     </div>`;
-    
+
             document.body.append(container);
-    
-    
+
+
         }
-    
+
     }
     fetchData();
 
