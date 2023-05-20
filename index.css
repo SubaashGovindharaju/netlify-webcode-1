@@ -2,6 +2,7 @@
 @media (max-width: 400px){
     .content{ 
       width: 186px !important;
+         margin-left: 5px;
     }
      .get{
       left: 30px !important;
