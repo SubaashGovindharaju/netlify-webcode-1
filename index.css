@@ -153,6 +153,8 @@ width: 150px !important;
   }
   .text-box{
     margin-top: 20px !important;
+          font-weight: bold;
+
   }
   .input-search{
     height: 50px;
