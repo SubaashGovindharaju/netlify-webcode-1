@@ -2,7 +2,7 @@
 @media (max-width: 400px){
     .content{ 
       width: 186px !important;
-         margin-left: 5px;
+      margin-left: 5px;
     }
      .get{
       left: 30px !important;
@@ -58,19 +58,6 @@
 
 }
 
-/* @media (min-width: 769px){
-  .content{
-    height: 420px !important;
-  }
-.card-body{
-  height: 500px !important;
-  
-}
-.card{
-  background-color: #22a6b3 !important;
-}
-
-}  */
 
   
 
@@ -90,22 +77,30 @@ body {
     color:#301E67;
     border-radius: 25px !important;
     height: 310px ;
+    box-shadow:  12px 12px 15px 6px rgb(39, 40, 73)! important;
+
 
 }
+
 
 .card-header{
     color: #B6EADA;
     background-color: #03001C !important;
     border-radius: 25px !important;
+
 }
 .btn {
     margin-top:20px ;
     color: #03001C !important;
     background-color:  #5B8FB9 !important;
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     position: absolute;
     top: 15px !important;
+  
 
+}
+.btn:hover{
+  background-color: #22a6b3 !important;
 }
 
  
@@ -113,6 +108,7 @@ body {
     padding-left: 10px;
     padding-top: 5px;
     margin-bottom: 5px !important;
+
 }
 .text-button{
 position: absolute;
@@ -153,7 +149,7 @@ width: 150px !important;
   }
   .text-box{
     margin-top: 20px !important;
-          font-weight: bold;
+    font-weight: bold;
 
   }
   .input-search{
@@ -222,10 +218,7 @@ width: 150px !important;
   
 }
 
-.get:first-of-type {    /* For increasing performance 
-                       ID/Class should've been used. 
-                       For a small demo 
-                       it's okaish for now */
+.get:first-of-type {    
   animation: showup 7s infinite;
 }
 
