@@ -1,23 +1,23 @@
 
-@media (max-width: 426px){
+@media (max-width: 376px){
     .content{ 
-      width: 200px !important;
-      overflow: hidden !important;
-
+      width: 186px !important;
     }
      .get{
-      left: 70px !important;
+      left: 30px !important;
+      
     }
   
  .card{
-  width: 180px !important;
+  width: 166px !important;
   height: 220px !important ;
+  padding-right:40px !important ;
 
 }
   
      .card-body{
       padding-left: 0px !important;
-      width: 500px !important;
+      width: 186px !important;
       height: 200px !important;
     }
 
