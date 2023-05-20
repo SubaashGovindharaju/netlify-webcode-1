@@ -1,8 +1,66 @@
+////Html element
+
 var container = document.createElement("div");
 container.className = "container-fluid";
 var row = document.createElement("div");
 row.className = "row";
 container.append(row);
+
+row.innerHTML=
+    `<div class="col-xl-12">
+                <div class="firstBox">
+
+                    <!-- header is created -->
+                    <h1 class="firstTitle">Brewery</h1>
+
+                    <!-- To get content is created -->
+                    <div class="get">To get </div>
+                    <div class="get">
+                        <span> into amazing experiences</span>
+                    </div>
+                    <!-- Slogan is created -->
+                    <h5 class="slogan">In the heart of our brewery lies a dedication to excellence that is as timeless
+                        as the craft itself. We meticulously hand-select the finest ingredients, pouring our passion and
+                        expertise into every step of the brewing process. From the crackle of malt to the dance of
+                        bubbles, our beers are an embodiment of the art and science of brewing. Join us in the pursuit
+                        of liquid perfection, as we raise our glasses and toast to the boundless possibilities that flow
+                        from the taps of our brewery</h5>
+                </div>
+
+                <!-- Serch bar is creater -->
+                <div class="search-box">
+                    <button class="btn-search"><i class="fa fa-search" onclick="get()"></i> </button>
+                    <input type="text" id="input-search" class="input-search" placeholder="Type eg:micro,nano,large...">
+
+
+                </div>
+
+            </div>`;
+
+
+            document.body.append(container);
+
+
+
+
+
+
+
+
+
+/// JS function
+
+
+
+
+
+var container = document.createElement("div");
+container.className = "container-fluid";
+var row = document.createElement("div");
+row.className = "row";
+container.append(row);
+
+
 let search;
 
 
